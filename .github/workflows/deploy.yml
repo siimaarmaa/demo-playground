@@ -42,8 +42,13 @@ jobs:
           port="${SSH_PORT:-22}"
           ssh_opts="-i ~/.ssh/deploy_key -p ${port} -o StrictHostKeyChecking=accept-new -o BatchMode=yes"
 
-          rsync -avz --delete \
+          rsync -avz \
             --omit-dir-times \
             --no-perms --no-owner --no-group \
+            --exclude='.git' \
+            --exclude='.gitignore' \
+            --exclude='.gitattributes' \
+            --exclude='.github' \
+            --exclude='.gitmodules' \
             -e "ssh ${ssh_opts}" \
             ./ "${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/"
