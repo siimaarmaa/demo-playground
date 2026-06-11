@@ -50,5 +50,6 @@ jobs:
             --exclude='.gitattributes' \
             --exclude='.github' \
             --exclude='.gitmodules' \
+            --exclude='README.md' \
             -e "ssh ${ssh_opts}" \
             ./ "${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/"
