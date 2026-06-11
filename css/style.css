@@ -189,19 +189,6 @@
     gap: 0.4rem;
   }
   
-  .project-badge {
-    font-weight: 700;
-    font-size: 0.8rem;
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    background: #2563eb;
-    color: white;
-    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.4);
-    transition: box-shadow 0.2s;
-  }
-  
   .project-row:hover .project-badge {
     box-shadow: 0 8px 20px rgba(96, 165, 250, 0.5);
   }
